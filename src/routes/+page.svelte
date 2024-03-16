@@ -14,7 +14,11 @@
         <div class="price">$999</div>
       </div>
       <div class="btn">
-        <button class="buy-btn">Buy Now</button>
+        <div class="buy-btn">
+            {#each buy_1 as link}
+                <a href={link.href} class="link">{link.title}</a> 
+            {/each}
+        </div>
         <button class="fav">
           <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
@@ -32,7 +36,11 @@
         <div class="price">$1599</div>
       </div>
       <div class="btn">
-        <button class="buy-btn">Buy Now</button>
+        <div class="buy-btn">
+            {#each buy_2 as link}
+                <a href={link.href} class="link">{link.title}</a> 
+            {/each}
+        </div>
         <button class="fav">
           <svg class="svg" id="i-star" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
             <path d="M16 2 L20 12 30 12 22 19 25 30 16 23 7 30 10 19 2 12 12 12 Z" />
@@ -42,6 +50,21 @@
     </section>
   </main>
 </body>
+
+<script>
+    const buy_1 = [
+        {
+            title: 'Buy Now',
+            href: '/buy_1',
+        },
+    ];
+    const buy_2 = [
+        {
+            title: 'Buy Now',
+            href: '/buy_2',
+        },
+    ];
+</script>
 
 <style>
 :root {
